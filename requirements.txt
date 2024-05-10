@@ -1,0 +1,8 @@
+datasets
+sentence_transformers
+langchain
+langchain_core
+langchain_openai
+faiss
+numpy
+tqdm

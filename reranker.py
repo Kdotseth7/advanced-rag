@@ -2,6 +2,9 @@ from sentence_transformers import SentenceTransformer, util
 
 
 class Reranker:
+    """
+    Reranks the top-k documents retrieved by the retriever using a SentenceTransformer model.
+    """
     def __init__(self, model_name: str) -> None:
         self.model_name = model_name
 

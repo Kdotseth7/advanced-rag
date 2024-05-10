@@ -2,6 +2,9 @@ from datasets import load_dataset
 
 
 class Dataset:
+    """
+    Dataset class to load the chunked dataset from Hugging Face Datasets
+    """
     def __init__(self, dataset_name: str, split: str) -> None:
         self.dataset_name = dataset_name
         self.split = split

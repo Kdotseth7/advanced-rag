@@ -2,6 +2,9 @@ from sentence_transformers import SentenceTransformer
 
 
 class Embeddings:
+    """
+    Generates embeddings for a given text using a SentenceBERT model.
+    """
     def __init__(self, model_name: str) -> None:
         self.model_name = model_name
 

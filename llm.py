@@ -6,7 +6,7 @@ from langchain.chains import LLMChain
 load_dotenv(find_dotenv())
 
 class LLM:
-    """LLM Class for RAG Ppeline thats applied after Rrranking documents
+    """LLM Class for RAG Ppeline thats applied after Re-ranking documents
     """
     def __init__(self, model: str, temperature: int) -> None:
         self.model = model
