@@ -4,7 +4,7 @@ The Advanced RAG Pipeline is a powerful system that leverages various state-of-t
 
 ## Features
 
-- Chunked Documents: The pipeline supports pre-chunked documents from Hugging Face, allowing for efficient processing and retrieval.
+- Chunked Documents: The pipeline supports pre-chunked documents from Hugging Face, allowing for efficient processing and retrieval. These documents are a collection of research papers from arvix.
 
 - Embedding Generation: SentenceBERT is used to generate high-quality embeddings for the documents, capturing their semantic meaning.
 
