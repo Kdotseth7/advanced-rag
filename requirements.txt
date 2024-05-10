@@ -6,3 +6,4 @@ langchain_openai
 faiss
 numpy
 tqdm
+colorama
