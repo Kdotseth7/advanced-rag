@@ -8,7 +8,7 @@ class Reranker:
     def __init__(self, model_name: str) -> None:
         self.model_name = model_name
 
-    def rerank(self, documents, query, top_k=10) -> list:
+    def rerank(self, documents, query, top_n=10) -> list:
         model = SentenceTransformer(self.model_name)
         query_embedding = model.encode(query, convert_to_tensor=True)
         document_embeddings = model.encode(documents, convert_to_tensor=True)
@@ -22,4 +22,4 @@ class Reranker:
         # Sort documents by their scores in descending order
         reranked_documents = sorted(doc_scores, key=lambda x: x[1], reverse=True)
 
-        return reranked_documents[:top_k]
+        return reranked_documents[:top_n]

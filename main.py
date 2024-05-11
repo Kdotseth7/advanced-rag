@@ -12,7 +12,7 @@ from llm import LLM
 
 
 if __name__ == '__main__':
-    print(f"{Fore.YELLOW}Advanced RAG Pipeline{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}=====Advanced RAG Pipeline====={Style.RESET_ALL}")
     # Load Utils
     utils = Utils()
     utils.check_dir(".indices")
@@ -46,10 +46,10 @@ if __name__ == '__main__':
     retriever = Retriever()
     docs = retriever.search(documents=documents, embed_model=sentence_bert, index=index, query=query, top_k=20)
     
-    # Rerank the top-k documents using DistilBERT
-    print(f"{Fore.RED}4.) Re-Ranking documents using distilBERT and retrieving Top-K...{Style.RESET_ALL}")
+    # Rerank the top-n documents using DistilBERT
+    print(f"{Fore.RED}4.) Re-Ranking documents using distilBERT and retrieving Top-N documents...{Style.RESET_ALL}")
     reranker = Reranker("sentence-transformers/msmarco-distilbert-base-v3")
-    reranked_docs = reranker.rerank(docs, query, top_k=5)
+    reranked_docs = reranker.rerank(docs, query, top_n=5)
     context = "\n".join([doc[0] for doc in reranked_docs])
     
     # Generate response from OPENAI Model
