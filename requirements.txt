@@ -1,9 +1,9 @@
 datasets
-sentence_transformers
+sentence-transformers
 langchain
-langchain_core
-langchain_openai
-faiss
+langchain-core
+langchain-openai
+faiss-cpu
 numpy
 tqdm
 colorama
